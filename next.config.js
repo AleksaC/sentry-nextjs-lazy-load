@@ -3,14 +3,26 @@
 // https://nextjs.org/docs/api-reference/next.config.js/introduction
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
+const crypto = require("crypto");
+
 const { withSentryConfig } = require("@sentry/nextjs");
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 
+const release = crypto
+  .randomBytes(15)
+  .toString("base64")
+  .replace(/\//g, "_")
+  .replace(/\+/g, "-");
+const env = process.env.SENTRY_ENVIRONMENT || "development";
+
 const moduleExports = {
-  // Your existing module.exports
+  publicRuntimeConfig: {
+    SENTRY_RELEASE: release,
+    SENTRY_ENVIRONMENT: env,
+  },
 };
 
 const sentryWebpackPluginOptions = {
