@@ -4,6 +4,7 @@ Slightly modified [with-sentry](https://github.com/vercel/next.js/tree/fcdba560e
 next.js example.
 
 Modifications to the original example include:
+
 - conversion to typescript
 - disabling sentry in development
 - lazy loading on the client
@@ -16,6 +17,6 @@ like tracing, there is no need to bundle sentry instead of lazy loading it.
 
 ## Contact 🙋‍♂️
 
--   [Personal website](https://aleksac.me)
--   <a target="_blank" href="http://twitter.com/aleksa_c_"><img alt='Twitter followers' src="https://img.shields.io/twitter/follow/aleksa_c_.svg?style=social"></a>
--   aleksacukovic1@gmail.com
+- [Personal website](https://aleksac.me)
+- <a target="_blank" href="http://twitter.com/aleksa_c_"><img alt='Twitter followers' src="https://img.shields.io/twitter/follow/aleksa_c_.svg?style=social"></a>
+- aleksacukovic1@gmail.com
