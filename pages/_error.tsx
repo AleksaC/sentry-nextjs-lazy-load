@@ -2,7 +2,7 @@ import { NextPageContext } from "next";
 import NextErrorComponent, { ErrorProps } from "next/error";
 
 import { getSentry } from "@utils/sentry";
-import { WindowWithSentry } from "../components/sentry";
+import { WindowWithSentry } from "@components/sentry";
 
 type MyErrorProps = ErrorProps & {
   hasGetInitialPropsRun: boolean;

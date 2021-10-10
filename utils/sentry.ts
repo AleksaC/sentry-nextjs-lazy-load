@@ -1,5 +1,5 @@
 import * as Sentry from "@sentry/nextjs";
-import { WindowWithSentry } from "../components/sentry";
+import { WindowWithSentry } from "@components/sentry";
 
 export async function getSentry(): Promise<typeof Sentry> {
   if (typeof window === "undefined") {
